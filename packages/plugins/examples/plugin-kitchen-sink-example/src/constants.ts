@@ -99,7 +99,7 @@ export const DEFAULT_CONFIG = {
 export const RUNTIME_LAUNCHER: PluginLauncherRegistration = {
   id: "kitchen-sink-runtime-launcher",
   displayName: "Kitchen Sink Modal",
-  description: "Demonstrates runtime launcher registration from the worker.",
+  description: "Shows how a worker adds a launch button.",
   placementZone: "toolbarButton",
   entityTypes: ["project", "issue"],
   action: {
@@ -111,3 +111,4 @@ export const RUNTIME_LAUNCHER: PluginLauncherRegistration = {
     bounds: "wide",
   },
 };
+

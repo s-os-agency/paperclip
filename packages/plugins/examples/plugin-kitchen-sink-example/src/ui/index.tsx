@@ -546,7 +546,7 @@ function KitchenSinkPageWidgets({ context }: { context: PluginPageProps["context
 
   return (
     <div style={widgetGridStyle}>
-      <MiniWidget title="Runtime Summary" eyebrow="Overview">
+      <MiniWidget title="Work summary" eyebrow="Overview">
         <div style={{ display: "grid", gap: "4px", fontSize: "12px" }}>
           <div>Companies: {overview.data?.counts.companies ?? 0}</div>
           <div>Projects: {overview.data?.counts.projects ?? 0}</div>
@@ -757,7 +757,7 @@ function KitchenSinkPageWidgets({ context }: { context: PluginPageProps["context
         </div>
       </MiniWidget>
 
-      <MiniWidget title="Latest Runtime State" eyebrow="Diagnostics">
+      <MiniWidget title="Current state" eyebrow="Diagnostics">
         <div style={mutedTextStyle}>
           This updates as you use the worker demos below.
         </div>
@@ -2209,7 +2209,7 @@ export function KitchenSinkDashboardWidget({ context }: PluginWidgetProps) {
         <Pill label="dashboardWidget" />
       </div>
       <div style={{ fontSize: "12px", opacity: 0.7 }}>
-        Plugin runtime surface demo for the current company.
+        Plugin example for this company.
       </div>
       <div style={{ display: "grid", gap: "4px", fontSize: "12px" }}>
         <div>Recent records: {overview.data?.recentRecords.length ?? 0}</div>
@@ -2403,3 +2403,4 @@ export function KitchenSinkLauncherModal() {
     </div>
   );
 }
+
