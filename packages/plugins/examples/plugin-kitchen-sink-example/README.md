@@ -15,7 +15,7 @@ It is intentionally broad:
 - state, entities, assets, metrics, activity
 - local workspace and process demos
 
-This plugin is for local development, contributor onboarding, and runtime regression testing. It is not meant as a production plugin template to ship unchanged.
+This plugin is for local development, contributor onboarding, and system regression testing. It is not meant as a production plugin template to ship unchanged.
 
 ## Install
 
@@ -29,5 +29,5 @@ Or install it from the Paperclip plugin manager as a bundled example once this r
 ## Notes
 
 - Local workspace and process demos are trusted-only and default to safe, curated commands.
-- The plugin settings page lets you toggle optional demo surfaces and local runtime behavior.
+- The plugin settings page lets you toggle optional demo surfaces and local system behavior.
 - Some SDK-defined host surfaces still depend on the Paperclip host wiring them visibly; this package aims to exercise the currently mounted ones and make the rest obvious.

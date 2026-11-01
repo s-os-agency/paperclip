@@ -251,7 +251,7 @@ export function PluginSettings() {
                 <CardHeader>
                   <CardTitle className="text-base flex items-center gap-1.5">
                     <Cpu className="h-4 w-4" />
-                    Runtime Dashboard
+                    System Dashboard
                   </CardTitle>
                   <CardDescription>
                     Worker process, scheduled jobs, and webhook deliveries
@@ -384,7 +384,7 @@ export function PluginSettings() {
                     </>
                   ) : (
                     <p className="text-sm text-muted-foreground">
-                      Runtime diagnostics are unavailable right now.
+                      System diagnostics are unavailable right now.
                     </p>
                   )}
                 </CardContent>

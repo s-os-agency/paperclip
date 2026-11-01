@@ -210,7 +210,7 @@ export function PluginManager() {
           <div className="space-y-1 text-sm">
             <p className="font-medium text-foreground">Plugins are alpha.</p>
             <p className="text-muted-foreground">
-              The plugin runtime and API surface are still changing. Expect breaking changes while this feature settles.
+              The plugin system and API surface are still changing. Expect breaking changes while this feature settles.
             </p>
           </div>
         </div>

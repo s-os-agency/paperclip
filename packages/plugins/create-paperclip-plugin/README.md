@@ -27,7 +27,7 @@ Generates:
 - `esbuild` and `rollup` config files using SDK bundler presets
 - dev server script for hot-reload (`paperclip-plugin-dev-server`)
 
-The scaffold intentionally uses plain React elements rather than host-provided UI kit components, because the current plugin runtime does not ship a stable shared component library yet.
+The scaffold intentionally uses plain React elements rather than host-provided UI kit components, because the current plugin system does not ship a stable shared component library yet.
 
 Inside this repo, the generated package uses `@paperclipai/plugin-sdk` via `workspace:*`.
 

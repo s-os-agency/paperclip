@@ -8,7 +8,7 @@ First-party reference plugin showing the smallest possible UI extension.
 - `entrypoints.ui` wiring for plugin UI bundles
 - a minimal React widget rendered in the Paperclip dashboard
 - reading host context (`companyId`) from `PluginWidgetProps`
-- worker lifecycle hooks (`setup`, `onHealth`) for basic runtime observability
+- worker lifecycle hooks (`setup`, `onHealth`) for basic system status
 
 ## API Surface
 

@@ -25,13 +25,13 @@
 
 ## What is Paperclip?
 
-# Open-source orchestration for zero-human companies
+# Open-source task coordination for zero-human companies
 
 **If OpenClaw is an _employee_, Paperclip is the _company_**
 
-Paperclip is a Node.js server and React UI that orchestrates a team of AI agents to run a business. Bring your own agents, assign goals, and track your agents' work and costs from one dashboard.
+Paperclip is a Node.js server and React UI that coordinates a team of AI agents to run a business. Bring your own agents, assign goals, and track your agents' work and costs from one dashboard.
 
-It looks like a task manager — but under the hood it has org charts, budgets, governance, goal alignment, and agent coordination.
+It looks like a task manager — but under the hood it has org charts, budgets, management, goal alignment, and agent coordination.
 
 **Manage business goals, not pull requests.**
 
@@ -84,7 +84,7 @@ It looks like a task manager — but under the hood it has org charts, budgets, 
 <tr>
 <td align="center" width="33%">
 <h3>🔌 Bring Your Own Agent</h3>
-Any agent, any runtime, one org chart. If it can receive a heartbeat, it's hired.
+Any agent, any system, one org chart. If it can receive a heartbeat, it's hired.
 </td>
 <td align="center" width="33%">
 <h3>🎯 Goal Alignment</h3>
@@ -102,7 +102,7 @@ Monthly budgets per agent. When they hit the limit, they stop. No runaway costs.
 </td>
 <td align="center">
 <h3>🏢 Multi-Company</h3>
-One deployment, many companies. Complete data isolation. One control plane for your portfolio.
+One deployment, many companies. Complete data isolation. One control panel for your portfolio.
 </td>
 <td align="center">
 <h3>🎫 Ticket System</h3>
@@ -133,7 +133,7 @@ Monitor and manage your autonomous businesses from anywhere.
 | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | ❌ You have 20 Claude Code tabs open and can't track which one does what. On reboot you lose everything.                              | ✅ Tasks are ticket-based, conversations are threaded, sessions persist across reboots.                                                |
 | ❌ You manually gather context from several places to remind your bot what you're actually doing.                                     | ✅ Context flows from the task up through the project and company goals — your agent always knows what to do and why.                  |
-| ❌ Folders of agent configs are disorganized and you're re-inventing task management, communication, and coordination between agents. | ✅ Paperclip gives you org charts, ticketing, delegation, and governance out of the box — so you run a company, not a pile of scripts. |
+| ❌ Folders of agent configs are disorganized and you're re-inventing task management, communication, and coordination between agents. | ✅ Paperclip gives you org charts, ticketing, delegation, and management out of the box — so you run a company, not a pile of scripts. |
 | ❌ Runaway loops waste hundreds of dollars of tokens and max your quota before you even know what happened.                           | ✅ Cost tracking surfaces token budgets and throttles agents when they're out. Management prioritizes with budgets.                    |
 | ❌ You have recurring jobs (customer support, social, reports) and have to remember to manually kick them off.                        | ✅ Heartbeats handle regular work on a schedule. Management supervises.                                                                |
 | ❌ You have an idea, you have to find your repo, fire up Claude Code, keep a tab open, and babysit it.                                | ✅ Add a task in Paperclip. Your coding agent works on it until it's done. Management reviews their work.                              |
@@ -142,14 +142,14 @@ Monitor and manage your autonomous businesses from anywhere.
 
 ## Why Paperclip is special
 
-Paperclip handles the hard orchestration details correctly.
+Paperclip handles the hard task coordination details correctly.
 
 |                                   |                                                                                                               |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | **Atomic execution.**             | Task checkout and budget enforcement are atomic, so no double-work and no runaway spend.                      |
 | **Persistent agent state.**       | Agents resume the same task context across heartbeats instead of restarting from scratch.                     |
-| **Runtime skill injection.**      | Agents can learn Paperclip workflows and project context at runtime, without retraining.                      |
-| **Governance with rollback.**     | Approval gates are enforced, config changes are revisioned, and bad changes can be rolled back safely.        |
+| **System skill injection.**      | Agents can learn Paperclip workflows and project context when the agent runs, without retraining.                      |
+| **Management with rollback.**     | Approval gates are enforced, config changes are revisioned, and bad changes can be rolled back safely.        |
 | **Goal-aware execution.**         | Tasks carry full goal ancestry so agents consistently see the "why," not just a title.                        |
 | **Portable company templates.**   | Export/import orgs, agents, and skills with secret scrubbing and collision handling.                          |
 | **True multi-company isolation.** | Every entity is company-scoped, so one deployment can run many companies with separate data and audit trails. |
@@ -162,10 +162,10 @@ Paperclip handles the hard orchestration details correctly.
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | **Not a chatbot.**           | Agents have jobs, not chat windows.                                                                                  |
 | **Not an agent framework.**  | We don't tell you how to build agents. We tell you how to run a company made of them.                                |
-| **Not a workflow builder.**  | No drag-and-drop pipelines. Paperclip models companies — with org charts, goals, budgets, and governance.            |
+| **Not a workflow builder.**  | No drag-and-drop pipelines. Paperclip models companies — with org charts, goals, budgets, and management.            |
 | **Not a prompt manager.**    | Agents bring their own prompts, models, and runtimes. Paperclip manages the organization they work in.               |
 | **Not a single-agent tool.** | This is for teams. If you have one agent, you probably don't need Paperclip. If you have twenty — you definitely do. |
-| **Not a code review tool.**  | Paperclip orchestrates work, not pull requests. Bring your own review process.                                       |
+| **Not a code review tool.**  | Paperclip coordinates work, not pull requests. Bring your own review process.                                       |
 
 <br/>
 
@@ -203,10 +203,10 @@ If you're a solo-entreprenuer you can use Tailscale to access Paperclip on the g
 Yes. A single deployment can run an unlimited number of companies with complete data isolation.
 
 **How is Paperclip different from agents like OpenClaw or Claude Code?**
-Paperclip _uses_ those agents. It orchestrates them into a company — with org charts, budgets, goals, governance, and accountability.
+Paperclip _uses_ those agents. It coordinates them into a company — with org charts, budgets, goals, management, and accountability.
 
 **Why should I use Paperclip instead of just pointing my OpenClaw to Asana or Trello?**
-Agent orchestration has subtleties in how you coordinate who has work checked out, how to maintain sessions, monitoring costs, establishing governance - Paperclip does this for you.
+Agent task coordination has subtleties in how you coordinate who has work checked out, how to maintain sessions, monitoring costs, establishing management - Paperclip does this for you.
 
 (Bring-your-own-ticket-system is on the Roadmap)
 

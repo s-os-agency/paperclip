@@ -39,16 +39,16 @@ pnpm add @paperclipai/plugin-sdk
 
 ## Current deployment caveats
 
-The SDK is stable enough for local development and first-party examples, but the runtime deployment model is still early.
+The SDK is stable enough for local development and first-party examples, but the system deployment model is still early.
 
 - Plugin workers and plugin UI should both be treated as trusted code today.
 - Plugin UI bundles run as same-origin JavaScript inside the main Paperclip app. They can call ordinary Paperclip HTTP APIs with the board session, so manifest capabilities are not a frontend sandbox.
 - Local-path installs and the repo example plugins are development workflows. They assume the plugin source checkout exists on disk.
-- For deployed plugins, publish an npm package and install that package into the Paperclip instance at runtime.
-- The current host runtime expects a writable filesystem, `npm` available at runtime, and network access to the package registry used for plugin installation.
-- Dynamic plugin install is currently best suited to single-node persistent deployments. Multi-instance cloud deployments still need a shared artifact/distribution model before runtime installs are reliable across nodes.
+- For deployed plugins, publish an npm package and install that package into the Paperclip instance when the agent runs.
+- The current host system expects a writable filesystem, `npm` available when the agent runs, and network access to the package registry used for plugin installation.
+- Dynamic plugin install is currently best suited to single-node persistent deployments. Multi-instance cloud deployments still need a shared artifact/distribution model before system installs are reliable across nodes.
 - The host does not currently ship a real shared React component kit for plugins. Build your plugin UI with ordinary React components and CSS.
-- `ctx.assets` is not part of the supported runtime in this build. Do not depend on asset upload/read APIs yet.
+- `ctx.assets` is not part of the supported system in this build. Do not depend on asset upload/read APIs yet.
 
 If you are authoring a plugin for others to deploy, treat npm-packaged installation as the supported path and treat repo-local example installs as a development convenience.
 
@@ -129,7 +129,7 @@ Subscribe in `setup` with `ctx.events.on(name, handler)` or `ctx.events.on(name,
 
 **Filter (optional):** Pass a second argument to `on()`: `{ projectId?, companyId?, agentId? }` so the host only delivers matching events.
 
-**Company context:** Events still carry `companyId` for company-scoped data, but plugin installation and activation are instance-wide in the current runtime.
+**Company context:** Events still carry `companyId` for company-scoped data, but plugin installation and activation are instance-wide in the current system.
 
 ## Scheduled (recurring) jobs
 
@@ -745,7 +745,7 @@ The host maintains an in-memory `PluginStreamBus` that fans out worker notificat
 
 1. Worker emits `streams.emit` notification via stdout
 2. Host (`plugin-worker-manager`) receives the notification and publishes to `PluginStreamBus`
-3. SSE endpoint (`GET /api/plugins/:pluginId/bridge/stream/:channel?companyId=...`) subscribes to the bus and writes events to the response
+3. SSE service address (`GET /api/plugins/:pluginId/bridge/stream/:channel?companyId=...`) subscribes to the bus and writes events to the response
 
 The bus is keyed by `pluginId:channel:companyId`, so multiple UI clients can subscribe to the same stream independently.
 
